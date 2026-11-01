@@ -1,0 +1,24 @@
+{
+  "name": "genpark-personal-agent-zone2-cardiorespiratory-fitness-skill",
+  "version": "1.0.0",
+  "description": "Calculates Karvonen Zone 2 heart rate corridors, estimates VO2max, models fat oxidation kinetics, and prescribes weekly mitochondrial longevity volume.",
+  "tools": [
+    {
+      "name": "calculate_zone2_metabolic_corridor",
+      "description": "Calculates Karvonen Zone 2 heart rate training corridor and Uth-Sørensen VO2max.",
+      "parameters": {
+        "age": "float",
+        "resting_hr": "float (optional, default 58.0)",
+        "max_hr": "float (optional)"
+      }
+    },
+    {
+      "name": "schedule_weekly_aerobic_dose",
+      "description": "Prescribes weekly progressive Zone 2 aerobic volume and session splits for longevity.",
+      "parameters": {
+        "current_weekly_zone2_minutes": "float (optional, default 90.0)",
+        "vo2_max_ml_kg_min": "float (optional, default 42.0)"
+      }
+    }
+  ]
+}
